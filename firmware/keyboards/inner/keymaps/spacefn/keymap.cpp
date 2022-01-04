@@ -46,7 +46,7 @@ void setupKeymap() {
         
         
         uint32_t layer2[MATRIX_ROWS][MATRIX_COLS] = KEYMAP(
-            KC_GRV,   KC_F1,    KC_F2,   KC_F3,    KC_F4,    KC_F5,   KC_F6,    KC_F7,    KC_F8,    KC_LBRC,  KC_RBRC,   KC_PIPE,
+            KC_GRV,   KC_F1,    KC_F2,   KC_F3,    KC_F4,    KC_F5,   KC_F6,    KC_F7,    KC_F8,    KC_LBRC,  KC_RBRC,   KC_DEL,
             KC_TAB,   KC_F7,    KC_F8,   KC_F9,    KC_F10,   KC_F11,  KC_UNDS,  KC_MINS,  KC_EQL,   KC_LCBR,  KC_RCBR,   KC_ENT,   
             KC_LSFT,  KC_F9,    KC_CUT,  KC_COPY,  KC_PASTE, KC_FIND, KC_UNDO,  KC_NO,    KC_NO,    KC_COMM,  KC_SLASH,  KC_ENT,
             KC_GRV ,  KC_LCTL,           KC_NO,    KC_NO,             KC_NO,    KC_NO,    KC_RALT,  KC_RCTL,  LAYER_2,   KC_DOWN
@@ -54,10 +54,10 @@ void setupKeymap() {
         
         
         uint32_t layer3[MATRIX_ROWS][MATRIX_COLS] = KEYMAP(
-            UF2_DFU,            BLEPROFILE_1,        BLEPROFILE_2,        BLEPROFILE_3,       KC_4,     KC_5,    KC_6,     KC_7,    KC_8,     KC_9,     KC_0,      KC_BSLS,
-            PRINT_BLE,          KC_DISPLAY_BRIGHTD,  KC_DISPLAY_BRIGHTI,  KC_HASH,            KC_NO,    KC_NO,   KC_NO,    KC_NO,   KC_NO,    KC_NO,    KC_NO,     KC_NO,   
-            BATTERY_CALC_TEST,  KC_AUDIO_MUTE,       KC_AUDIO_VOL_DOWN,   KC_AUDIO_VOL_UP ,   OUT_USB,  OUT_BT,  KC_B,     KC_N,    KC_M,     KC_COMM,  KC_SLASH,  KC_ENT,
-            OUT_AUTO,           KC_LCTL,                                  KC_LALT,            KC_LGUI,           KC_BSPC,  KC_SPC,  KC_RALT,  KC_RCTL,  LAYER_2,   SLEEP_NOW
+            UF2_DFU,            BLEPROFILE_1,        BLEPROFILE_2,        BLEPROFILE_3,       BATTERY_CALC_FILTERED,   KC_5,     KC_6,    KC_7,     KC_8,     KC_9,      KC_0,      KC_BSLS,
+            PRINT_BLE,          KC_DISPLAY_BRIGHTD,  KC_DISPLAY_BRIGHTI,  KC_HASH,            KC_NO,                   KC_NO,    KC_NO,   KC_NO,    KC_NO,    KC_NO,     KC_NO,     KC_NO,   
+            BATTERY_CALC_TEST,  KC_AUDIO_MUTE,       KC_AUDIO_VOL_DOWN,   KC_AUDIO_VOL_UP ,   OUT_USB,                 OUT_BT,   KC_B,    KC_N,     KC_M,     KC_COMM,   KC_SLASH,  KC_ENT,
+            OUT_AUTO,           BATTERY_CALC_DEFAULT,                     KC_LALT,            KC_NO,                             KC_BSPC,  KC_SPC,  KC_RALT,  KC_RCTL,  LAYER_2,   SLEEP_NOW
         );
 
     uint32_t tap[MATRIX_ROWS][MATRIX_COLS] =  KEYMAP(
@@ -87,7 +87,7 @@ void setupKeymap() {
         KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
         KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_SCLN, KC_NO,
         KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
-        KC_NO,   KC_NO,            KC_NO,   KC_NO,            KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
+        KC_NO,   KC_NO,            KC_NO,   KC_SPC,           KC_SPC,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
      );
 
 
