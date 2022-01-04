@@ -28,7 +28,7 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 
 /* key matrix pins */
 #define MATRIX_ROW_PINS {41, 30, 31, 43}
-#define MATRIX_COL_PINS {3, 28, 45, 2, 29, 12, 6, 8, 5, 12, 24, 20}
+#define MATRIX_COL_PINS {3, 28, 45, 2, 29, 12, 6, 8, 5, 13, 24, 20}
 #define UNUSED_PINS {}
 
 /* COL2ROW or ROW2COL */
