@@ -39,7 +39,7 @@ void setupKeymap() {
     
         uint32_t layer1[MATRIX_ROWS][MATRIX_COLS] = KEYMAP(
             KC_GRV,   KC_1,     KC_2,    KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,      KC_BSLS,
-            KC_TAB,   KC_EXLM,  KC_AT,   KC_HASH,  KC_DLR,   KC_PERC,  KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_LPRN,  KC_RPRN,   KC_ENT,   
+            KC_TAB,   KC_EXLM,  KC_AT,   KC_HASH,  KC_DLR,   KC_PERC,  KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_LPRN,  KC_RPRN,   KC_PIPE,   
             KC_LSFT,  KC_F9,    KC_NO,   KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_COMM,  KC_SLASH,  KC_PGUP,
             KC_GRV ,  KC_LCTL,           KC_NO,    KC_NO,              KC_NO,    KC_NO,    KC_HOME,  KC_PGDN,  KC_END,    KC_NO
         );  
@@ -47,7 +47,7 @@ void setupKeymap() {
         
         uint32_t layer2[MATRIX_ROWS][MATRIX_COLS] = KEYMAP(
             KC_GRV,   KC_F1,    KC_F2,   KC_F3,    KC_F4,    KC_F5,   KC_F6,    KC_F7,    KC_F8,    KC_LBRC,  KC_RBRC,   KC_DEL,
-            KC_TAB,   KC_F7,    KC_F8,   KC_F9,    KC_F10,   KC_F11,  KC_UNDS,  KC_MINS,  KC_EQL,   KC_LCBR,  KC_RCBR,   KC_ENT,   
+            KC_TAB,   KC_F7,    KC_F8,   KC_F9,    KC_F10,   KC_F11,  KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,  KC_SCLN,   KC_QUOTE,   
             KC_LSFT,  KC_F9,    KC_CUT,  KC_COPY,  KC_PASTE, KC_FIND, KC_UNDO,  KC_NO,    KC_NO,    KC_COMM,  KC_SLASH,  KC_ENT,
             KC_GRV ,  KC_LCTL,           KC_NO,    KC_NO,             KC_NO,    KC_NO,    KC_RALT,  KC_RCTL,  LAYER_2,   KC_DOWN
         );
@@ -75,24 +75,6 @@ void setupKeymap() {
         KC_NO,   KC_NO,            KC_NO,   LAYER_1,          LAYER_2, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
     );
 
-    uint32_t singletap[MATRIX_ROWS][MATRIX_COLS] =  KEYMAP(
-        KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
-        KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_QUOTE,   KC_NO,
-        KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
-        KC_NO,   KC_NO,            KC_NO,   KC_NO,            KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
-    );
-
-
-     uint32_t doubletap[MATRIX_ROWS][MATRIX_COLS] = KEYMAP(
-        KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
-        KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_SCLN, KC_NO,
-        KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
-        KC_NO,   KC_NO,            KC_NO,   KC_SPC,           KC_SPC,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
-     );
-
-
-
-
 
     /*
      * add the other layers
@@ -112,8 +94,6 @@ void setupKeymap() {
             matrix[row][col].addActivation(_L3, Method::PRESS, layer3[row][col]);
             matrix[row][col].addActivation(_L0, Method::MT_TAP, tap[row][col]);
             matrix[row][col].addActivation(_L0, Method::MT_HOLD, hold[row][col]);
-            matrix[row][col].addActivation(_L0, Method::DT_TAP, singletap[row][col]);           
-            matrix[row][col].addActivation(_L0, Method::DT_DOUBLETAP, doubletap[row][col]);
         }
     }
 
